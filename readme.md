@@ -58,8 +58,8 @@ const App = () => {
     fixAt:  /* e.g: 400 */,
     onPin: () => /* do something here ... */,
     onUnpin: () => /* do something here ... */,
-    onFix: () => /* do something here ... */,
-    onUnFix: () => /* do something here ... */
+    onFix: (fixedAt) => /* do something here ... */,
+    onUnFix: (fixedAt) => /* do something here ... */
   });
   return (
     <div

@@ -15,8 +15,3 @@ export const callOnFix = (scroll, fixAt, onFix) => {
 export const callOnUnfix = (prevScroll, scroll, fixAt, onUnfix) => {
   !!onUnfix && prevScroll === fixAt && scroll > prevScroll && onUnfix(fixAt);
 };
-
-export const HookWrapper = (props) => {
-  const hook = props.hook ? props.hook() : undefined;
-  return <div hook={hook} />;
-};

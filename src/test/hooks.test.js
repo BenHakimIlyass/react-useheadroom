@@ -1,13 +1,12 @@
 import React from "react";
 import useHeadroom from "../";
 import { shallow } from "enzyme";
-import {
-  callOnPin,
-  callOnUnpin,
-  callOnFix,
-  callOnUnfix,
-  HookWrapper,
-} from "../helpers";
+import { callOnPin, callOnUnpin, callOnFix, callOnUnfix } from "../helpers";
+
+const HookWrapper = (props) => {
+  const hook = props.hook ? props.hook() : undefined;
+  return <div hook={hook} />;
+};
 
 // hooks
 it("should return true as initial value", () => {
