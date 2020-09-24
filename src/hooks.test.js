@@ -10,7 +10,7 @@ import {
 } from "./helpers";
 
 // hooks
-it("should call the hook and return true as initial value", () => {
+it("should return true as initial value", () => {
   const wrapper = shallow(
     <HookWrapper hook={() => useHeadroom({ fixAt: 400 })} />
   );
