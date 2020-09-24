@@ -1,6 +1,6 @@
 {
   "name": "react-useheadroom",
-  "version": "1.3.1-beta.1",
+  "version": "1.3.0-beta.3",
   "description": "A lightweight 426 B custom react hook that returns the state of the pinned header logic (headroom).",
   "main": "src/index.js",
   "scripts": {
@@ -17,6 +17,10 @@
   ],
   "author": "ilyassbenhakim",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenHakimIlyass/react-useheadroom"
+  },
   "dependencies": {
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3"

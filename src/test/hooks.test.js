@@ -1,5 +1,5 @@
 import React from "react";
-import useHeadroom from "./";
+import useHeadroom from "../";
 import { shallow } from "enzyme";
 import {
   callOnPin,
@@ -7,7 +7,7 @@ import {
   callOnFix,
   callOnUnfix,
   HookWrapper,
-} from "./helpers";
+} from "../helpers";
 
 // hooks
 it("should return true as initial value", () => {
