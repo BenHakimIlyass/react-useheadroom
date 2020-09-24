@@ -1,3 +1,5 @@
+import React from "react";
+
 export const callOnPin = (prevScroll, scroll, fixAt, onPin) => {
   !!onPin && prevScroll > scroll && scroll > fixAt && onPin();
 };
