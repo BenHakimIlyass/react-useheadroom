@@ -1,6 +1,6 @@
 {
   "name": "react-useheadroom",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A lightweight custom react hook that returns the state of the pinned/fixed header logic (headroom).",
   "main": "index.js",
   "author": "Ilyass Ben Hakim <ilyassbenhakim2@gmail.com>",
