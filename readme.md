@@ -36,7 +36,7 @@ export default App;
 
 Optionnaly you can pass those props.
 
-- **fixAt** the header will be fixed at this value, and cannot be unpinned.
+- **fixAt** the header will be fixed at this value, and cannot be unpinned (default value is 0).
 
 - **onPin** callback
 

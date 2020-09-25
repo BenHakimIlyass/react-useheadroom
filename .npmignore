@@ -12,6 +12,9 @@ node_modules
 # Users Environment Variables
 .env
 
-#tests
-src/setupTests.js
-src/test
+# Tests
+test
+setupTests.js
+
+# Dev
+src
