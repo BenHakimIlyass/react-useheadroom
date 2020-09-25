@@ -1,8 +1,8 @@
 ## react-useHeadroom
 
-A lightweight 426 B custom React hook for hidding the header each time the scroll goes backward, this hook is returning a boolean state, which we can use in nav style prop or with CSSinJS.
+A lightweight custom React hook for hidding the header each time the scroll goes backward, this hook is returning a boolean state, which we can use in nav style prop or with CSSinJS.
 
-Here is a demo [live](https://codesandbox.io/s/github/BenHakimIlyass/react-useHeadroom).
+Here is a demo [live](https://codesandbox.io/s/tender-snowflake-zf79v).
 
 ## Installation
 
