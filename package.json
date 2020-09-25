@@ -1,8 +1,12 @@
 {
   "name": "react-useheadroom",
-  "version": "1.4.1",
-  "description": "A lightweight 426 B custom react hook that returns the state of the pinned header logic (headroom).",
+  "version": "1.4.2",
+  "description": "A lightweight custom react hook that returns the state of the pinned/fixed header logic (headroom).",
   "main": "index.js",
+  "author": "Ilyass Ben Hakim <ilyassbenhakim2@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/BenHakimIlyass/react-useheadroom/issues"
+  },
   "scripts": {
     "build": "babel src --out-dir .",
     "test": "react-scripts test"
@@ -16,7 +20,6 @@
     "hidden-nav",
     "react-headroom"
   ],
-  "author": "ilyassbenhakim",
   "license": "MIT",
   "repository": {
     "type": "git",
