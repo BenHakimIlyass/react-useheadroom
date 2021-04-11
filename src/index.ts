@@ -1,15 +1,29 @@
-import React, { useEffect } from "react";
-import { callOnPin, callOnUnpin, callOnFix, callOnUnfix } from "./helpers";
+import React, { useEffect } from 'react';
+import { callOnPin, callOnUnpin, callOnFix, callOnUnfix } from './helpers';
 
-export default ({ onPin, onUnpin, fixAt = 0, onFix, onUnfix }) => {
+type Props = {
+  onPin?: (...args: Array<any>) => void;
+  onUnpin?: (...args: Array<any>) => void;
+  onFix?: (...args: Array<any>) => void;
+  onUnfix?: (...args: Array<any>) => void;
+  fixAt?: number;
+};
+
+const useHeadroom = ({
+  onPin,
+  onUnpin,
+  fixAt = 0,
+  onFix,
+  onUnfix,
+}: Props): boolean => {
   const [scroll, setScroll] = React.useState(0);
 
   // Tracking scroll value
   useEffect(() => {
     const handleScroll = () => setScroll(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     // Cleanup function
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollRef = React.useRef({ scroll: scroll });
@@ -40,3 +54,4 @@ export default ({ onPin, onUnpin, fixAt = 0, onFix, onUnfix }) => {
 
   return scrollRef.current.scroll >= scroll || scroll <= fixAt;
 };
+export default useHeadroom;

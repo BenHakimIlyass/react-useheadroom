@@ -1,6 +1,6 @@
 {
   "name": "react-useheadroom",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "A lightweight custom react hook that returns the state of the pinned/fixed header logic (headroom).",
   "main": "index.js",
   "author": "Ilyass Ben Hakim <ilyassbenhakim2@gmail.com>",
@@ -8,7 +8,7 @@
     "url": "https://github.com/BenHakimIlyass/react-useheadroom/issues"
   },
   "scripts": {
-    "build": "babel src --out-dir .",
+    "build": "babel src --out-dir . --extensions '.ts'",
     "test": "react-scripts test"
   },
   "keywords": [
@@ -25,7 +25,9 @@
     "type": "git",
     "url": "https://github.com/BenHakimIlyass/react-useheadroom"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/preset-typescript": "^7.13.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
