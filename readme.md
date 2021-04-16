@@ -7,7 +7,11 @@ A lightweight custom React hook for hidding the header each time the scroll goes
 Here is a demo [live](https://codesandbox.io/s/tender-snowflake-zf79v).
 
 ## Installation
+### Typescript
 
+`yarn add react-useheadroom@canary`
+
+### Javascript
 `yarn add react-useheadroom` or `npm install react-useheadroom`
 
 ## Usage
