@@ -1,16 +1,16 @@
 {
   "name": "react-useheadroom",
-  "version": "1.6.3",
-  "description": "A lightweight custom react hook that returns the state of the shown/hidden header logic (headroom).",
+  "version": "1.6.4",
+  "description": "A fully-typed lightweight react custom hook that returns the state of the shown/hidden header (headroom).",
   "author": "Ilyass Ben Hakim <ilyassbenhakim2@gmail.com>",
   "bugs": {
     "url": "https://github.com/BenHakimIlyass/react-useheadroom/issues"
   },
   "types": "./useHeadroom.d.ts",
-  "module": "./index.js",
-  "main": "./index.js",
+  "module": "./binary/index.js",
+  "main": "./binary/index.js",
   "scripts": {
-    "build": "babel src --out-dir . --extensions \".ts\"",
+    "build": "babel src/binary/ --out-dir ./binary/ --extensions \".ts\"",
     "test": "react-scripts test"
   },
   "keywords": [
