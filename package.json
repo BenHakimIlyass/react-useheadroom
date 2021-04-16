@@ -1,6 +1,6 @@
 {
   "name": "react-useheadroom",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "A fully-typed lightweight react custom hook that returns the state of the shown/hidden header (headroom).",
   "author": "Ilyass Ben Hakim <ilyassbenhakim2@gmail.com>",
   "bugs": {
