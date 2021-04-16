@@ -1,25 +1,33 @@
 ## react-useHeadroom
 
-A lightweight custom React hook for hidding the header each time the scroll goes backward, this hook is returning a boolean state, which we can use in a component style prop or with CSSinJS.
+[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/microsoft/TypeScript)
+
+A fully-typed lightweight react custom hook that returns the state of the shown/hidden header (headroom).
 
 Here is a demo [live](https://codesandbox.io/s/tender-snowflake-zf79v).
 
 ## Installation
+
+### Typescript
+
+`yarn add react-useheadroom@types`
+
+### Javascript
 
 `yarn add react-useheadroom` or `npm install react-useheadroom`
 
 ## Usage
 
 ```jsx
-import * as React from "react";
-import "./styles.css";
-import useHeadroom from "react-useheadroom";
+import * as React from 'react';
+import './styles.css';
+import useHeadroom from 'react-useheadroom';
 
 const App = () => {
   const isPinned = useHeadroom({});
   return (
     <div
-      className="header"
+      className='header'
       style={{
         transform: isPinned
           ? `translate3d(0,0px,0)`
