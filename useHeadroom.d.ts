@@ -1,4 +1,4 @@
-type UseHeadroomPropsT = {
+declare type UseHeadroomPropsT = {
   /**
    * onPin prop will trigger a given function
    * every time the navbar got pinned (shown)

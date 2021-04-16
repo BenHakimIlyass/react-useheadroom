@@ -27,7 +27,24 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var useHeadroom = function useHeadroom(props) {
+var initialProps = {
+  onPin: function onPin() {
+    return null;
+  },
+  onUnpin: function onUnpin() {
+    return null;
+  },
+  onFix: function onFix() {
+    return null;
+  },
+  onUnfix: function onUnfix() {
+    return null;
+  },
+  fixAt: 0
+};
+
+var useHeadroom = function useHeadroom() {
+  var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialProps;
   var onPin = props.onPin,
       onUnpin = props.onUnpin,
       _props$fixAt = props.fixAt,
@@ -58,19 +75,19 @@ var useHeadroom = function useHeadroom(props) {
   });
 
   (0, _react.useEffect)(function () {
-    return (0, _helpers.callOnPin)(scrollRef.current.scroll, scroll, fixAt, onPin);
+    (0, _helpers.callOnPin)(scrollRef.current.scroll, scroll, fixAt, onPin);
   }, [scroll < fixAt || scrollRef.current.scroll <= scroll]); // Handle onUnpin callback
 
   (0, _react.useEffect)(function () {
-    return (0, _helpers.callOnUnpin)(scrollRef.current.scroll, scroll, fixAt, onUnpin);
+    (0, _helpers.callOnUnpin)(scrollRef.current.scroll, scroll, fixAt, onUnpin);
   }, [scroll < fixAt ? scroll < fixAt : scrollRef.current.scroll >= scroll]); // Handle onFix callback
 
   (0, _react.useEffect)(function () {
-    return (0, _helpers.callOnFix)(scroll, fixAt, onFix);
+    (0, _helpers.callOnFix)(scroll, fixAt, onFix);
   }, [scroll <= fixAt]); // Handle onUnfix callback
 
   (0, _react.useEffect)(function () {
-    return (0, _helpers.callOnUnfix)(scrollRef.current.scroll, scroll, fixAt, onUnfix);
+    (0, _helpers.callOnUnfix)(scrollRef.current.scroll, scroll, fixAt, onUnfix);
   }, [scroll > fixAt]); // Handling the backward scroll behavior
 
   (0, _react.useEffect)(function () {

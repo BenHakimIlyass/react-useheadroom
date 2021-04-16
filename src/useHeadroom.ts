@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
 import { callOnPin, callOnUnpin, callOnFix, callOnUnfix } from './helpers';
 
-const useHeadroom = (props?) => {
+const initialProps = {
+  onPin: () => null,
+  onUnpin: () => null,
+  onFix: () => null,
+  onUnfix: () => null,
+  fixAt: 0,
+};
+const useHeadroom = (props = initialProps) => {
   const { onPin, onUnpin, fixAt = 0, onFix, onUnfix } = props;
   const [scroll, setScroll] = React.useState(0);
 
@@ -15,24 +22,24 @@ const useHeadroom = (props?) => {
 
   const scrollRef = React.useRef({ scroll: scroll });
 
-  useEffect(() => callOnPin(scrollRef.current.scroll, scroll, fixAt, onPin), [
-    scroll < fixAt || scrollRef.current.scroll <= scroll,
-  ]);
+  useEffect(() => {
+    callOnPin(scrollRef.current.scroll, scroll, fixAt, onPin);
+  }, [scroll < fixAt || scrollRef.current.scroll <= scroll]);
 
   // Handle onUnpin callback
-  useEffect(
-    () => callOnUnpin(scrollRef.current.scroll, scroll, fixAt, onUnpin),
-    [scroll < fixAt ? scroll < fixAt : scrollRef.current.scroll >= scroll]
-  );
+  useEffect(() => {
+    callOnUnpin(scrollRef.current.scroll, scroll, fixAt, onUnpin);
+  }, [scroll < fixAt ? scroll < fixAt : scrollRef.current.scroll >= scroll]);
 
   // Handle onFix callback
-  useEffect(() => callOnFix(scroll, fixAt, onFix), [scroll <= fixAt]);
+  useEffect(() => {
+    callOnFix(scroll, fixAt, onFix);
+  }, [scroll <= fixAt]);
 
   // Handle onUnfix callback
-  useEffect(
-    () => callOnUnfix(scrollRef.current.scroll, scroll, fixAt, onUnfix),
-    [scroll > fixAt]
-  );
+  useEffect(() => {
+    callOnUnfix(scrollRef.current.scroll, scroll, fixAt, onUnfix);
+  }, [scroll > fixAt]);
 
   // Handling the backward scroll behavior
   useEffect(() => {
