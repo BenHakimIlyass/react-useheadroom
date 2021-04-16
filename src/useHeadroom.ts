@@ -1,14 +1,8 @@
 import React, { useEffect } from 'react';
-import UseHeadroom from '../useHeadroom';
 import { callOnPin, callOnUnpin, callOnFix, callOnUnfix } from './helpers';
 
-const useHeadroom: UseHeadroom = ({
-  onPin,
-  onUnpin,
-  fixAt = 0,
-  onFix,
-  onUnfix,
-}) => {
+const useHeadroom = (props?) => {
+  const { onPin, onUnpin, fixAt = 0, onFix, onUnfix } = props;
   const [scroll, setScroll] = React.useState(0);
 
   // Tracking scroll value

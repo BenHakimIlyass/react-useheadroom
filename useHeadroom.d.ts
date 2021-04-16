@@ -1,4 +1,4 @@
-declare type UseHeadroomProperties = {
+type UseHeadroomPropsT = {
   /**
    * onPin prop will trigger a given function
    * every time the navbar got pinned (shown)
@@ -42,6 +42,5 @@ declare type UseHeadroomProperties = {
  * - [useHeadroom API](https://www.npmjs.com/package/react-useheadroom)
  */
 
-declare type UseHeadroom = (props: UseHeadroomProperties) => boolean;
-
-export default UseHeadroom;
+declare const useHeadroom: (props?: UseHeadroomPropsT) => boolean;
+export default useHeadroom;

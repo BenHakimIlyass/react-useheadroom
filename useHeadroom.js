@@ -27,13 +27,13 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var useHeadroom = function useHeadroom(_ref) {
-  var onPin = _ref.onPin,
-      onUnpin = _ref.onUnpin,
-      _ref$fixAt = _ref.fixAt,
-      fixAt = _ref$fixAt === void 0 ? 0 : _ref$fixAt,
-      onFix = _ref.onFix,
-      onUnfix = _ref.onUnfix;
+var useHeadroom = function useHeadroom(props) {
+  var onPin = props.onPin,
+      onUnpin = props.onUnpin,
+      _props$fixAt = props.fixAt,
+      fixAt = _props$fixAt === void 0 ? 0 : _props$fixAt,
+      onFix = props.onFix,
+      onUnfix = props.onUnfix;
 
   var _React$useState = _react["default"].useState(0),
       _React$useState2 = _slicedToArray(_React$useState, 2),
