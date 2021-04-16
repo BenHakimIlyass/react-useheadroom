@@ -19,7 +19,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # prod
-helpers.js
-index.js
-setupTests.js
-useHeadroom.js
+*.js
