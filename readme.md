@@ -8,12 +8,6 @@ Here is a demo [live](https://codesandbox.io/s/tender-snowflake-zf79v).
 
 ## Installation
 
-### Typescript
-
-`yarn add react-useheadroom@types`
-
-### Javascript
-
 `yarn add react-useheadroom` or `npm install react-useheadroom`
 
 ## Usage

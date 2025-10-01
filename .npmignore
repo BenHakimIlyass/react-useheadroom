@@ -12,8 +12,6 @@ node_modules
 # Users Environment Variables
 .env
 
-#babel
-.babelrc
 
 # Tests
 test
